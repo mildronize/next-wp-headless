@@ -1,0 +1,12 @@
+{
+    "version": 2,
+    "name": "mildronize-blog-preview",
+    "alias": "mildronize-blog-preview",
+    "builds": [
+        {
+            "src": "package.json",
+            "use": "@now/next"
+          }
+    ]
+    
+}
