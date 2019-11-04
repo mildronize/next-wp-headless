@@ -28,7 +28,7 @@ export default class extends Component {
     try {
       const response = await fetch(`${Config.WPAPI.previewById}/${id}`);
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       if ('message' in data){
         this.setState({ errorMsg: data.message });
         console.log(data.message);
