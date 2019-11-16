@@ -34,7 +34,9 @@ module.exports = withOffline(withBundleAnalyzer(withSass({
       await getPages('page',`${apiUrl}/wp/v2/pages`)
     );
     return Object.assign({}, pages, {
-      '/': { page: '/' }
+      '/': { page: '/' },
+      '/admin': { page: '/admin' },
+      '/_preview': { page: '/_preview' }
     })
   }
 })));
