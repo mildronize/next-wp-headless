@@ -4,6 +4,7 @@ import Head from 'next/head'
 import fetch from 'isomorphic-unfetch'
 import Config from '../../config';
 import PageLayout from '../../components/layouts/PageLayout';
+import { parseISO, format } from 'date-fns';
 import Prism from 'prismjs';
 import "prismjs/components/prism-python";
 
@@ -23,26 +24,32 @@ export default class extends Component {
   }
 
   render () {
-    const { title, content } = this.props.post
-
-
-
+    const { title, content, date } = this.props.post
 
     return (
       <PageLayout>
       <main>
+       
         <Head>
           <title>{title.rendered}</title>
         </Head>
+        <article>
         <h1
           dangerouslySetInnerHTML={{ __html:  title.rendered }}
         />
+         <p class="post-date">
+            { format(parseISO(date), "MMMM d, yyyy") }
+          </p>
         <div
           dangerouslySetInnerHTML={{ __html:  content.rendered }}
         />
-        <Link href='/'>
-          <a>Go back to home</a>
-        </Link>
+        <hr />
+        <section><center>   
+          <Link href='/'>
+            <a><i class="fas fa-arrow-left mr-3"></i> GO BACK TO HOME</a>
+          </Link>
+        </center></section>
+        </article>
       </main>
       </PageLayout>
     )

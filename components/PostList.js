@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link';
-import { DateTime } from 'luxon';
+import { parseISO, format } from 'date-fns';
 
 export default function PostList({ posts }){
     return (
@@ -8,9 +8,9 @@ export default function PostList({ posts }){
       {posts.map(post => (
         <div className="row postlist-item" key={post.slug}>
           <div className="col-sm postlist-first-column">
-            <time className="postlist-date" dateTime="">{
-              DateTime.fromISO(post.date).toFormat('yyyy MMM, d')
-              }</time>
+            <time className="postlist-date">
+              { format(parseISO(post.date), "yyyy MMM, d") }
+              </time>
           </div>
           <div className="col-sm"> 
             <Link  href='/post/[slug]' as={`/post/${post.slug}`}>
