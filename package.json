@@ -25,7 +25,7 @@
     "preexport": "npm run build",
     "export": "next export",
     "prestart": "npm run export",
-    "start": "serve out",
+    "start": "serve -s out",
     "deploy": "npm run deploy:only && npm run now:clean",
     "deploy:only": "now --target production",
     "now:clean": "now rm --safe --yes next-mildronize"

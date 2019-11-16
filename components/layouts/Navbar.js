@@ -28,15 +28,15 @@ export default () => {
             <Collapse isOpen={isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/">
-                    <Link className="nav-link" >
+                  <NavLink >
+                    <Link className="nav-link" href="/">
                       <a>home</a>
                     </Link>
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink  href="/page/about">
-                    <Link className="nav-link">
+                  <NavLink  >
+                    <Link className="nav-link" href="/page/about">
                      <a>about</a> 
                     </Link>
                   </NavLink>
