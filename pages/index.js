@@ -9,7 +9,7 @@ class Home extends Component {
   static async getInitialProps() {
     // fetch list of posts
     const response = await fetch(
-      Config.WPAPI.allPostsById
+      `${Config.WPAPI.allPostsById}&per_page=${Config.per_page}`
     )
     const postList = await response.json()
     // console.log(postList);

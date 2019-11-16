@@ -14,6 +14,7 @@ export default class extends Component {
     const page  = await response.json()
     const data = page[0];
     console.log(`${Config.WPAPI.allPagesById}&slug=${query.slug}`);
+    // console.log(data );
     return { page: data }
   }
 

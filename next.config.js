@@ -6,6 +6,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 const apiUrl = 'https://host.mildronize.com/?rest_route=';
+const per_page = 100;
 
 async function getPages(prefix, WPUrl){
   const response = await fetch(WPUrl)
@@ -28,7 +29,7 @@ module.exports = withOffline(withBundleAnalyzer(withSass({
     outputStyle: 'compressed'
   },
   async exportPathMap () {
-    let pages = await getPages('post',`${apiUrl}/wp/v2/posts`);
+    let pages = await getPages('post',`${apiUrl}/wp/v2/posts&per_page=${per_page}`);
     pages = Object.assign({}, pages, 
       await getPages('page',`${apiUrl}/wp/v2/pages`)
     );

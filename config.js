@@ -14,6 +14,7 @@ const WPAPI = {
 const Config = {
     WPAPI,
     apiUrl,
+    per_page: 100,
     timezone: 'Asia/Bangkok'
 }
 export default Config
