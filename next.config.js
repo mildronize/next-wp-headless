@@ -1,5 +1,9 @@
 const fetch = require('isomorphic-unfetch');
 const withSass = require('@zeit/next-sass');
+const withOffline = require('next-offline')
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: process.env.ANALYZE === 'true',
+})
 
 async function getPages(prefix, WPUrl){
   const response = await fetch(WPUrl)
@@ -16,18 +20,18 @@ async function getPages(prefix, WPUrl){
   return pages;
 }
 
-module.exports = withSass({
+module.exports = withOffline(withBundleAnalyzer(withSass({
   sassLoaderOptions: {
     includePaths: ["./node_modules", "./styles"],
     outputStyle: 'compressed'
   },
-  async exportPathMap () {
-    let pages = await getPages('post','https://host.mildronize.com/wp-json/api/v1/posts');
-    pages = Object.assign({}, pages, 
-      await getPages('page','https://host.mildronize.com/wp-json/api/v1/pages/')
-    );
-    return Object.assign({}, pages, {
-      '/': { page: '/' }
-    })
-  }
-});
+  // async exportPathMap () {
+  //   let pages = await getPages('post','https://host.mildronize.com/wp-json/api/v1/posts');
+  //   pages = Object.assign({}, pages, 
+  //     await getPages('page','https://host.mildronize.com/wp-json/api/v1/pages/')
+  //   );
+  //   return Object.assign({}, pages, {
+  //     '/': { page: '/' }
+  //   })
+  // }
+})));

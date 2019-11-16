@@ -1,12 +1,15 @@
 {
   "name": "next-wp-headless-starter",
   "dependencies": {
+    "@next/bundle-analyzer": "^9.1.2",
     "@zeit/next-sass": "^1.0.1",
     "bootstrap": "^4.3.1",
+    "cross-env": "^6.0.3",
     "express": "^4.17.1",
     "isomorphic-unfetch": "^3.0.0",
     "luxon": "^1.21.1",
     "next": "^9.0.5",
+    "next-offline": "^4.0.6",
     "node-sass": "^4.13.0",
     "prismjs": "^1.17.1",
     "query-string": "^6.8.3",
@@ -15,14 +18,14 @@
     "serve": "11.2.0"
   },
   "scripts": {
-    "dev": "node server.js",
+    "dev": "next",
     "build": "next build",
-    "preexport": "npm run build",
-    "export": "next export",
-    "prestart": "npm run export",
-    "start": "serve out",
+    "analyze": "cross-env ANALYZE=true next build",
+    "analyze:server": "cross-env BUNDLE_ANALYZE=server next build",
+    "analyze:browser": "cross-env BUNDLE_ANALYZE=browser next build",
+    "start": "next start",
     "deploy": "npm run deploy:only && npm run now:clean",
     "deploy:only": "now --target production",
-    "now:clean": "now rm --safe --yes mildronize-blog-preview"
+    "now:clean": "now rm --safe --yes next-mildronize"
   }
 }

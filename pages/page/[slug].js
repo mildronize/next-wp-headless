@@ -9,28 +9,27 @@ export default class extends Component {
   static async getInitialProps ({ query }) {
     // fetch single post detail
     const response = await fetch(
-      `${Config.WPAPI.allPagesBySlug}/${query.slug}`
+      `${Config.WPAPI.allPagesById}&slug=${query.slug}`
     )
     const page  = await response.json()
-    return { ...page }
+    const data = page[0];
+    console.log(`${Config.WPAPI.allPagesById}&slug=${query.slug}`);
+    return { page: data }
   }
 
   render () {
-    const { title, content } = this.props
+    const { title, content } = this.props.page;
 
     return (
       <PageLayout>
       <main>
         <Head>
-          <title>{title}</title>
+          <title>{title.rendered}</title>
         </Head>
-        <h1>{title}</h1>
         <div
-          dangerouslySetInnerHTML={{ __html:  content }}
+          dangerouslySetInnerHTML={{ __html:  content.rendered }}
         />
-        <Link href='/'>
-          <a>Go back to home</a>
-        </Link>
+       
       </main>
       </PageLayout>
     )

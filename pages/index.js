@@ -9,9 +9,10 @@ class Home extends Component {
   static async getInitialProps() {
     // fetch list of posts
     const response = await fetch(
-      Config.WPAPI.allPostsBySlug
+      Config.WPAPI.allPostsById
     )
     const postList = await response.json()
+    // console.log(postList);
     return { postList }
   }
 

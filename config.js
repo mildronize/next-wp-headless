@@ -1,4 +1,4 @@
-const apiUrl = 'https://host.mildronize.com/wp-json';
+const apiUrl = 'https://host.mildronize.com/?rest_route=';
 
 const WPAPI = {    
     // allPosts: 'https://host.mildronize.com/wp-json/wp/v2/posts',     

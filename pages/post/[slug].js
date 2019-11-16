@@ -10,10 +10,11 @@ export default class extends Component {
   static async getInitialProps ({ query }) {
     // fetch single post detail
     const response = await fetch(
-      `${Config.WPAPI.allPostsBySlug}/${query.slug}`
+      `${Config.WPAPI.allPostsById}&slug=${query.slug}`
     )
-    const post = await response.json()
-    return { ...post }
+    const post = await response.json();
+    const data = post[0];
+    return { post: data }
   }
 
   componentDidMount(){
@@ -21,17 +22,20 @@ export default class extends Component {
   }
 
   render () {
-    const { title, content } = this.props
+    const { title, content } = this.props.post
+
+
+
 
     return (
       <PageLayout>
       <main>
         <Head>
-          <title>{title}</title>
+          <title>{title.rendered}</title>
         </Head>
-        <h1>{title}</h1>
+        <h1>{title.rendered}</h1>
         <div
-          dangerouslySetInnerHTML={{ __html:  content }}
+          dangerouslySetInnerHTML={{ __html:  content.rendered }}
         />
         <Link href='/'>
           <a>Go back to home</a>
