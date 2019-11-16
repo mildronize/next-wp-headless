@@ -5,6 +5,7 @@ import fetch from 'isomorphic-unfetch'
 import Config from '../../config';
 import PageLayout from '../../components/layouts/PageLayout';
 import Prism from 'prismjs';
+import "prismjs/components/prism-python";
 
 export default class extends Component {
   static async getInitialProps ({ query }) {
@@ -33,7 +34,9 @@ export default class extends Component {
         <Head>
           <title>{title.rendered}</title>
         </Head>
-        <h1>{title.rendered}</h1>
+        <h1
+          dangerouslySetInnerHTML={{ __html:  title.rendered }}
+        />
         <div
           dangerouslySetInnerHTML={{ __html:  content.rendered }}
         />

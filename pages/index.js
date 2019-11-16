@@ -31,7 +31,6 @@ class Home extends Component {
 
         <div className="page-section-header">Latest Posts</div>
         <PostList posts={this.props.postList} />
-        <center><a href="/blog/">All blog posts</a></center>
 
       </main>
       </PageLayout>
