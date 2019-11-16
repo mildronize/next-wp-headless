@@ -5,6 +5,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
 })
 
+const apiUrl = 'https://host.mildronize.com/?rest_route=';
+
 async function getPages(prefix, WPUrl){
   const response = await fetch(WPUrl)
   const postList = await response.json()
@@ -25,13 +27,13 @@ module.exports = withOffline(withBundleAnalyzer(withSass({
     includePaths: ["./node_modules", "./styles"],
     outputStyle: 'compressed'
   },
-  // async exportPathMap () {
-  //   let pages = await getPages('post','https://host.mildronize.com/wp-json/api/v1/posts');
-  //   pages = Object.assign({}, pages, 
-  //     await getPages('page','https://host.mildronize.com/wp-json/api/v1/pages/')
-  //   );
-  //   return Object.assign({}, pages, {
-  //     '/': { page: '/' }
-  //   })
-  // }
+  async exportPathMap () {
+    let pages = await getPages('post',`${apiUrl}/wp/v2/posts`);
+    pages = Object.assign({}, pages, 
+      await getPages('page',`${apiUrl}/wp/v2/pages`)
+    );
+    return Object.assign({}, pages, {
+      '/': { page: '/' }
+    })
+  }
 })));
