@@ -4,6 +4,10 @@ import Footer from './Footer';
 import Head from 'next/head';
 import stylesheet from '../../styles/index.scss';
 
+// https://web.dev/codelab-use-lazysizes-to-lazyload-images/
+import "lazysizes";
+import "lazysizes/plugins/parent-fit/ls.parent-fit";
+
 class PreviewLayout extends Component {
     render(){
         const { children } = this.props;

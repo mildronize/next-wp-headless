@@ -43,13 +43,18 @@ export default class extends Component {
         <div
           dangerouslySetInnerHTML={{ __html:  content.rendered }}
         />
-        <hr />
-        <section><center>   
+         </article>
+         
+        <section>
+        <div className="post-offset-bottom" />
+        <center>   
           <Link href='/'>
             <a><i class="fas fa-arrow-left mr-3"></i> GO BACK TO HOME</a>
           </Link>
-        </center></section>
-        </article>
+        </center>
+        <div className="post-offset-bottom" />
+        </section>
+       
       </main>
       </PageLayout>
     )

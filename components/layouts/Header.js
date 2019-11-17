@@ -12,10 +12,10 @@ import stylesheet from '../../styles/index.scss';
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
       <link rel="manifest" href="/manifest.json" />
-      <meta name="theme-color" content="#317EFB"/>
+      <meta name="theme-color" content="#ffffff"/>
       <link rel="icon"  type="image/png" href="/icons/favicon.png"/>
       <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png.png" />
-      <title>My site</title>
+      <title>Next version of Mildronize</title>
     </Head>
   </div>
 );
