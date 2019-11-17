@@ -36,7 +36,8 @@ module.exports = withOffline(withBundleAnalyzer(withSass({
     return Object.assign({}, pages, {
       '/': { page: '/' },
       '/admin': { page: '/admin' },
-      '/_preview': { page: '/_preview' }
+      '/_preview': { page: '/_preview' },
+      '/search': { page: '/search' }
     })
   }
 })));
