@@ -76,11 +76,11 @@ export default class extends Component {
           <Collapse isOpen={this.state.isOpenNav} >
             <Navbar color="light" light expand="sm" className={`bg-white ${this.state.isScrollDownClass}`} >
               <div className="page-container">
-                <NavbarBrand>
+                {/* <NavbarBrand> */}
                   <Link href="/">
                     <a> <img className="logo" src="/icons/apple-touch-icon.png" /></a>
                   </Link>
-                </NavbarBrand>
+                {/* </NavbarBrand> */}
 
                 {/* <NavbarToggler onClick={() => this.toggle()} /> */}
                 <span className="my-nav ml-auto">
