@@ -1,7 +1,6 @@
-# next-wp-headless-starter
+# My site
 
-## Features
-- Export to static
+using My Template <https://github.com/mildronize/next-wp-headless-starter>
 
 ## Thanks
 - `with-static-export-app` example from `Nextjs`
