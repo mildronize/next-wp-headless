@@ -44,7 +44,10 @@ export default class extends Component {
 
   handleScroll(event) {
     // reduce freq for checking scroll
-    if(window.scrollY % 10 != 0)return;
+    if(window.scrollY % 10 != 0){
+      this.setState({ previousScrollY: window.scrollY });
+      return;
+    }
     const targetScrollY = 130;
 
     if (window.scrollY > targetScrollY || this.state.isOpen) {
