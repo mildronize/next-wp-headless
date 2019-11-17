@@ -36,7 +36,10 @@ img{
   height: auto;
 }
 
-a{
+a {
+  @include word-wrap;
+}
+:not(pre)>code {
   @include word-wrap;
 }
 
