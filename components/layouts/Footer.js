@@ -6,7 +6,7 @@ const Footer = () => (
       <center>
         <div className="footer-copyright">© 2015 - 2019 mildronize.com </div>
         <div className="footer-info">
-         <a href="https://github.com/mildronize/next-wp-headless">V 4.0.0 Built</a> with ❤ by Thada Wangthammang
+         <a href="https://github.com/mildronize/next-wp-headless">V 4.0.0</a> Built with ❤ by Thada Wangthammang
          </div>
 
         <div className="footer-footer-user-links">

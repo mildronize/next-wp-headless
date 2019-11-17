@@ -78,8 +78,9 @@ export default class extends Component {
               <div className="page-container">
                 {/* <NavbarBrand> */}
                   <Link href="/">
-                    <a> <img className="logo" src="/icons/apple-touch-icon.png" /></a>
+                    <a> <img className="logo" src="/icons/apple-touch-icon.png" /></a> 
                   </Link>
+                  <a className="tag-alpha" href="https://github.com/mildronize/next-wp-headless">V 4.0.0</a>
                 {/* </NavbarBrand> */}
 
                 {/* <NavbarToggler onClick={() => this.toggle()} /> */}

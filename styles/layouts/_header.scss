@@ -12,7 +12,9 @@
   font-weight: 600;
   font-size: $h4-font-size;
   color: #0d47a1;
-  height: 30px;
+  height: 32px;
+  padding-top: 0.1rem;
+  padding-bottom: 0.3rem;
 }
 
 
@@ -28,7 +30,7 @@
   // -webkit-box-shadow: 0 2px 4px 2px hsla(0, 0, 0, 0.04);
   // -moz-box-shadow: 0 2px 4px 2px hsla(0, 0, 0, 0.04);
   // box-shadow: 0 2px 4px 2px hsla(0, 0, 0, 0.04);
-  padding: 0.4rem 0rem !important;
+  padding: 0.4rem 0.8rem !important;
   &-is-scroll-down {
     box-shadow: 0 2px 8px rgba(10, 10, 10, 0.1);
   }
@@ -59,4 +61,37 @@
 
 .navbar-light .navbar-nav .nav-link {
   color: rgba(0, 0, 0, 0.9)
+}
+
+
+@keyframes blink{
+  0%{opacity: 0;}
+  10%{opacity: 1;}
+  90%{opacity: 1;}
+  100%{opacity: 0;}
+  }
+
+.tag-alpha{
+  background-color: #ffdd57;
+  color: rgba(0,0,0,0.7);
+  align-items: center;
+  border-radius: 4px;
+  display: inline-flex;
+  font-size: .5rem;
+  height: 2em;
+  justify-content: center;
+  line-height: 1.5;
+  padding: 0.1rem 0.3rem;
+  margin-left: 0.6rem;
+
+  white-space: nowrap;
+  // margin-left: 0.7rem;
+  margin-top: 0.1rem;
+  // animation: blink 4s linear infinite;
+}
+
+.tag-alpha:hover {
+  text-decoration: none;
+  background-color: #e7c84c;
+  color: rgba(0,0,0,0.7);
 }
