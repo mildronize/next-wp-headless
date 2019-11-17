@@ -29,9 +29,9 @@ module.exports = withOffline(withBundleAnalyzer(withSass({
     outputStyle: 'compressed'
   },
   async exportPathMap () {
-    let pages = await getPages('post',`${apiUrl}/wp/v2/posts&per_page=${per_page}`);
+    let pages = await getPages('b',`${apiUrl}/wp/v2/posts&per_page=${per_page}`);
     pages = Object.assign({}, pages, 
-      await getPages('page',`${apiUrl}/wp/v2/pages`)
+      await getPages('p',`${apiUrl}/wp/v2/pages`)
     );
     return Object.assign({}, pages, {
       '/': { page: '/' },

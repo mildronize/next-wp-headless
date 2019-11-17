@@ -5,7 +5,7 @@ import fetch from 'isomorphic-unfetch'
 import Config from '../../config';
 import PageLayout from '../../components/layouts/PageLayout';
 
-export default class extends Component {
+export default class Page extends Component {
   static async getInitialProps ({ query }) {
     // fetch single post detail
     const response = await fetch(

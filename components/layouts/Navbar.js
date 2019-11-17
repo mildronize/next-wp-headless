@@ -3,11 +3,11 @@ import Link from 'next/link';
 import {
   Collapse,
   Navbar,
-  NavbarToggler,
+  // NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink
+  // Nav,
+  // NavItem,
+  // NavLink
 } from "reactstrap";
 
 export default class extends Component {
@@ -20,7 +20,7 @@ export default class extends Component {
     previousScrollY: 0,
   }
 
-  resetState(){
+  resetState() {
     this.setState({
       isOpen: false,
       isScrollDownClass: "",
@@ -44,7 +44,7 @@ export default class extends Component {
 
   handleScroll(event) {
     // reduce freq for checking scroll
-    if(window.scrollY % 10 != 0){
+    if (window.scrollY % 10 != 0) {
       this.setState({ previousScrollY: window.scrollY });
       return;
     }
@@ -58,7 +58,7 @@ export default class extends Component {
 
     // Check scroll direction: up or down
 
-    if (this.state.previousScrollY  >  window.scrollY || window.scrollY < targetScrollY) {
+    if (this.state.previousScrollY > window.scrollY || window.scrollY < targetScrollY) {
       this.setState({ isOpenNav: true });
     } else {
       this.setState({ isOpenNav: false });
@@ -78,19 +78,28 @@ export default class extends Component {
               <div className="page-container">
                 <NavbarBrand>
                   <Link href="/">
-                    <a> <span className="logo" >mildronize </span></a>
+                    <a> <img className="logo" src="/icons/apple-touch-icon.png" /></a>
                   </Link>
                 </NavbarBrand>
 
-                <NavbarToggler onClick={() => this.toggle()} />
+                {/* <NavbarToggler onClick={() => this.toggle()} /> */}
+                <span className="my-nav ml-auto">
+                  <Link  href="/p/about">
+                    <a className="nav-link">about</a>
+                  </Link>
+                  <Link  href="/search">
+                    <a className="nav-link"><i class="fas fa-search"></i></a>
+                  </Link>
+                </span>
 
-                <Collapse isOpen={this.state.isOpen} navbar>
+                {/* <Collapse isOpen={this.state.isOpen} navbar>
                   <Nav className="ml-auto" navbar>
                     <NavItem>
                       <Link className="nav-link" href="/">
-                        <a className="d-flex justify-content-center"><NavLink >
-                          home
-                  </NavLink>
+                        <a className="d-flex justify-content-center">
+                          <NavLink >
+                            home
+                          </NavLink>
                         </a>
                       </Link>
 
@@ -107,10 +116,8 @@ export default class extends Component {
                           <NavLink><i class="fas fa-search"></i></NavLink></a>
                       </Link>
                     </NavItem>
-
-
                   </Nav>
-                </Collapse>
+                </Collapse> */}
 
 
               </div>

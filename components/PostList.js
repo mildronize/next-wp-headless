@@ -13,7 +13,7 @@ export default function PostList({ posts }){
               </time>
           </div>
           <div className="col-sm"> 
-            <Link  href='/post/[slug]' as={`/post/${post.slug}`}>
+            <Link  href='/b/[slug]' as={`/b/${post.slug}`}>
               <a className="postlist-link"><span  dangerouslySetInnerHTML={{ __html:  post.title.rendered }} /></a>
               </Link>
           </div>
