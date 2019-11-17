@@ -6,7 +6,7 @@ const Footer = () => (
       <center>
         <div className="footer-copyright">Copyright © 2015 - 2019 by Thada Wangthammang</div>
         <div className="footer-info">
-          Powered by React & Wordpress
+          Powered by <a href="https://nextjs.org/">Next.js</a> & < a href="https://wordpress.org/">Wordpress</a> (Hosted by <a href="https://www.netlify.com/">Netlify</a>)
      </div>
 
         <div className="footer-footer-user-links">
