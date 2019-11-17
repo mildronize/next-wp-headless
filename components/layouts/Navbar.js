@@ -43,6 +43,8 @@ export default class extends Component {
   }
 
   handleScroll(event) {
+    // reduce freq for checking scroll
+    if(window.scrollY % 10 != 0)return;
     const targetScrollY = 130;
 
     if (window.scrollY > targetScrollY || this.state.isOpen) {
@@ -57,6 +59,7 @@ export default class extends Component {
       this.setState({ isOpenNav: true });
     } else {
       this.setState({ isOpenNav: false });
+      this.setState({ isOpen: false });
     }
 
     this.setState({ previousScrollY: window.scrollY });
