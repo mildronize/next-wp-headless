@@ -12,7 +12,10 @@
   font-weight: 600;
   font-size: $h4-font-size;
   color: #0d47a1;
+  height: 30px;
 }
+
+
 
 /*!
 * Bootstrap - navbar
@@ -30,8 +33,6 @@
     box-shadow: 0 2px 8px rgba(10, 10, 10, 0.1);
   }
 
-
-
   .nav-link {
     font-size: 1.05rem;
   }
@@ -45,6 +46,14 @@
       font-weight: bold;
       border-bottom: 3px solid #0d47a1;
     }
+  }
+}
+
+.my-nav {
+  .nav-link {
+    font-size: 1.05rem;
+    padding: 0 1rem;
+    display: inline-block;
   }
 }
 

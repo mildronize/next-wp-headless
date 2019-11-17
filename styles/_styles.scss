@@ -307,3 +307,9 @@ hr::before {
 .post-offset-bottom {
   margin-bottom: 7rem;
 }
+
+.post-tagline {
+  &-delimiter {
+    padding: 0 1rem;
+  }
+}
