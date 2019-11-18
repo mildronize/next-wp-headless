@@ -19,20 +19,20 @@ class Home extends Component {
   render() {
     return (
       <PageLayout>
-      <main>
+        <main>
+          <div className="home-spacing" />
+          <center className="hero-section">
+            <div className="hero-tagline">I'm Lecturer</div>
+            <div className="hero-title">Thada Wangthammang</div>
+            <p>Welcome to my personal archive. You can find almost stuff about me - blog posts, resume, projects, contact information, and more.</p>
+          </center>
 
-        <center className="hero-section">
-          <div className="hero-tagline">I'm Lecturer</div>
-          <div className="hero-title">Thada Wangthammang</div>
-          <p>Welcome to my personal archive. You can find almost stuff about me - blog posts, resume, projects, contact information, and more.</p>
-        </center>
+          <hr />
 
-        <hr />
+          <div className="page-section-header">Latest Posts</div>
+          <PostList posts={this.props.postList} />
 
-        <div className="page-section-header">Latest Posts</div>
-        <PostList posts={this.props.postList} />
-
-      </main>
+        </main>
       </PageLayout>
     )
   }

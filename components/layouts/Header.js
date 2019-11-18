@@ -13,7 +13,7 @@ import stylesheet from '../../styles/index.scss';
         <meta charSet="utf-8" />
       <link rel="manifest" href="/manifest.json" />
       <meta name="theme-color" content="#ffffff"/>
-      <link rel="icon"  type="image/png" href="/icons/favicon.png"/>
+      <link rel="icon"  type="image/png" href="/favicon.png" />
       <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png.png" />
       <title>Mildronize.com</title>
     </Head>
