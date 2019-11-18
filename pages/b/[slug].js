@@ -47,7 +47,7 @@ export default class PostPage extends Component {
             <h1
               dangerouslySetInnerHTML={{ __html: title.rendered }}
             />
-            <p class="post-tagline">
+            <p className="post-tagline">
               <span className="post-tagline-date">
                 {format(parseISO(date), "MMMM d, yyyy")}
               </span>
@@ -74,7 +74,7 @@ export default class PostPage extends Component {
             <div className="post-offset-bottom" />
             <center>
               <Link href='/'>
-                <a><i class="fas fa-arrow-left mr-3"></i> GO BACK TO HOME</a>
+                <a><i className="fas fa-arrow-left mr-3"></i> GO BACK TO HOME</a>
               </Link>
             </center>
             <div className="post-offset-bottom" />

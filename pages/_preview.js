@@ -64,7 +64,7 @@ export default class PreviewPage extends Component {
           <center>
             <h3 className="preview-header">-- Preview Mode --</h3>
           </center>
-          <div class="alert alert-secondary" role="alert">
+          <div className="alert alert-secondary" role="alert">
             <strong>slug:</strong> {slug}
           </div>
         </section>
@@ -73,10 +73,10 @@ export default class PreviewPage extends Component {
         ) : (
           <article>
             <h1
-              class="post-title"
+              className="post-title"
               dangerouslySetInnerHTML={{ __html: title }}
             />
-            <p class="post-date">
+            <p className="post-date">
               {/* {DateTime.fromSQL(date, { zone: Config.timezone }).toFormat(
                 "MMMM d, yyyy"
               )} */}

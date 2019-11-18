@@ -89,7 +89,7 @@ export default class extends Component {
                     <a className="nav-link">about</a>
                   </Link>
                   <Link  href="/search">
-                    <a className="nav-link"><i class="fas fa-search"></i></a>
+                    <a className="nav-link"><i className="fas fa-search"></i></a>
                   </Link>
                 </span>
 
@@ -114,7 +114,7 @@ export default class extends Component {
                     <NavItem>
                       <Link className="nav-link" href="/search">
                         <a className="d-flex justify-content-center">
-                          <NavLink><i class="fas fa-search"></i></NavLink></a>
+                          <NavLink><i className="fas fa-search"></i></NavLink></a>
                       </Link>
                     </NavItem>
                   </Nav>
