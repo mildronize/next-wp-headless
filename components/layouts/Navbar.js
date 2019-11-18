@@ -85,7 +85,7 @@ export default class extends Component {
 
                 {/* <NavbarToggler onClick={() => this.toggle()} /> */}
                 <span className="my-nav ml-auto">
-                  <Link  href="/p/about">
+                  <Link href='/p/about' as={`/p/about`} >
                     <a className="nav-link">about</a>
                   </Link>
                   <Link  href="/search">
