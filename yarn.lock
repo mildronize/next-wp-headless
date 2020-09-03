@@ -3965,10 +3965,10 @@ lazy-cache@^0.2.3:
   resolved "https://registry.yarnpkg.com/lazy-cache/-/lazy-cache-0.2.7.tgz#7feddf2dcb6edb77d11ef1d117ab5ffdf0ab1b65"
   integrity sha1-f+3fLctu23fRHvHRF6tf/fCrG2U=
 
-lazysizes@^5.2.0-beta1:
-  version "5.2.0-beta1"
-  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-5.2.0-beta1.tgz#c8841bc1fde1a00d24c8cf5416457a42b4e69f18"
-  integrity sha512-HH3gr5FhtO9PmVnwPWkBzR51ZMrFfVndUNNSyBcR6OMnO0vt6OaQXJmq/ZikHUTVqQg+w2+Bj8mLpHZ71HTftg==
+lazysizes@^5.2.1:
+  version "5.2.1"
+  resolved "https://registry.yarnpkg.com/lazysizes/-/lazysizes-5.2.1.tgz#f450e36a995efb5817acb8c904f3d2f2efc29ffa"
+  integrity sha512-607dEMlbcnkny2lGYVqoA/rQO+WGpWh/BISeS1eLfT8nHQw6E+R8ybJoKKGVlZ2czKPTATrsU95f+nkwix0fXw==
 
 lcid@^1.0.0:
   version "1.0.0"
